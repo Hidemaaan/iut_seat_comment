@@ -1,0 +1,7 @@
+version: '2.3'
+
+services:
+  app:
+    image: 'registry.gitlab.com/dr-robin/iut-seat'
+    ports:
+      - "80:6943"

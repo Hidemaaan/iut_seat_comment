@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko"> <!--ko가 한국어-->
+<head>
+<meta charset="UTF-8"> <!--utf-8이 표준-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!---->
+<meta name="apple-mobile-web-app-capable" content="yes"> <!--홈화면에 추가했을때 앱인것처럼 취급-->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="hanbaekhs.png"> <!--안드로이드 ios 통일안되서 따로 적음-->
+<link rel="icon" sizes="180x180" href="hanbaekhs.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"> <!--rel은 어떤 형식의 파일이고 href는 우리가 불러올 파일의 경로-->
+<title>이음터 자리확인</title>
+</head>
+<body>
+<div id="vue-root"> <!--html주석--> <!--el: vue root불러오는 역할-->
+	<div class="card"> <!--div는 각 글자들의 영역 지정해주는 칸같은 역할 -->
+		<div class="card-header">
+			이음터도서관 열람실 잔여좌석
+		</div>
+		<ul class="list-group list-group-flush"> <!--ul li는 list-->
+			<li class="list-group-item">일반열람실 좌석수 : {{defaultText}}</li>
+			<li class="list-group-item">학생열람실 좌석수 : {{studentText}}</li>
+			<li class="list-group-item">노트북실 좌석수 : {{notebookText}}</li>
+		</ul>
+	</div>
+	<button type="button" class="btn btn-info" @click="refresh()">새로고침</button> <!--버튼을 클릭하면 refresh함수를 호출해라-->
+	<p style="text-align: center">한백고등학교 IT연구부 & HBCOSA 제작</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://unpkg.com/vue"></script> <!--src가 불러올 경로로 app파일에 적은vue를 쓸수 있게 함-->
+<script src="app.js"></script> <!--app.js는 파일을 의미-->
+</body>
+</html>
